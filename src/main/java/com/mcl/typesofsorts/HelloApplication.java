@@ -9,6 +9,8 @@ import javafx.stage.Stage;
 import java.io.IOException;
 
 public class HelloApplication extends Application {
+
+    //first window
     @Override
     public void start(Stage stage) throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("hello-view.fxml"));
@@ -19,6 +21,7 @@ public class HelloApplication extends Application {
         stage.show();
     }
 
+    //second window
     public static void openSecondWindow() throws IOException {
         Stage secondStage = new Stage();
         secondStage.setTitle("Great!");
@@ -26,6 +29,25 @@ public class HelloApplication extends Application {
         Scene secondScene = new Scene(fxmlLoader.load(), 600, 400);
         secondStage.setScene(secondScene);
         secondStage.show();
+    }
+
+    //window for point a the exact element
+    public static void openInputNumber() throws IOException {
+        Stage inputStage = new Stage();
+        inputStage.setTitle("Input!");
+        FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("input.fxml"));
+        Scene secondScene = new Scene(fxmlLoader.load(), 200, 120);
+        inputStage.setScene(secondScene);
+        inputStage.show();
+    }
+
+    public static void error(String errorMessage) throws IOException {
+        Stage errorStage = new Stage();
+        errorStage.setTitle("Input!");
+        FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource(""));
+        Scene secondScene = new Scene(fxmlLoader.load(), 200, 120);
+        errorStage.setScene(secondScene);
+        errorStage.show();
     }
 
 
