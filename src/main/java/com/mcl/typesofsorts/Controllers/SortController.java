@@ -1,4 +1,4 @@
-package com.mcl.typesofsorts;
+package com.mcl.typesofsorts.Controllers;
 
 import java.net.URL;
 import java.util.ResourceBundle;

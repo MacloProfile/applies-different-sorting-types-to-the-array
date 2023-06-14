@@ -1,10 +1,11 @@
-package com.mcl.typesofsorts;
+package com.mcl.typesofsorts.Controllers;
 
 import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
-import com.mcl.typesofsorts.logic.FirstWindow;
+import com.mcl.typesofsorts.FirstWindow;
+import com.mcl.typesofsorts.HelloApplication;
 import javafx.collections.FXCollections;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
@@ -56,13 +57,14 @@ public class MainController {
 
         //start button
         startButton.setOnAction(event -> {
+            System.out.println("work");
             //finds out which sorting or search to use
             String type = "";
             if (searches.getValue() != null)
                 type = searches.getValue();
             else if (sorts.getValue() != null)
                 type = sorts.getValue();
-
+            //Checking for the correctness of the specified data
             if (type.equals("")){
 
             } else {

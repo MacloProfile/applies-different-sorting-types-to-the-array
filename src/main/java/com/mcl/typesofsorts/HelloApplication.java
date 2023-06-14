@@ -1,5 +1,6 @@
 package com.mcl.typesofsorts;
 
+import com.mcl.typesofsorts.Controllers.ErrorController;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
@@ -40,11 +41,18 @@ public class HelloApplication extends Application {
         inputStage.setScene(secondScene);
         inputStage.show();
     }
+    //error message
+    public static String errorMessage = "ERROR";
 
-    public static void error(String errorMessage) throws IOException {
+    public static String getErrorMessage() {
+        return errorMessage;
+    }
+    //error window
+    public static void error(String message) throws IOException {
         Stage errorStage = new Stage();
-        errorStage.setTitle("Input!");
-        FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource(""));
+        errorStage.setTitle("ERROR");
+        errorMessage = message;
+        FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("error.fxml"));
         Scene secondScene = new Scene(fxmlLoader.load(), 200, 120);
         errorStage.setScene(secondScene);
         errorStage.show();
