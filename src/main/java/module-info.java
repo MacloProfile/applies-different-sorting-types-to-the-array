@@ -7,4 +7,6 @@ module com.mcl.typesofsorts {
     exports com.mcl.typesofsorts;
     exports com.mcl.typesofsorts.Controllers;
     opens com.mcl.typesofsorts.Controllers to javafx.fxml;
+    exports com.mcl.typesofsorts.logic;
+    opens com.mcl.typesofsorts.logic to javafx.fxml;
 }

@@ -4,12 +4,10 @@ import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
-import com.mcl.typesofsorts.FirstWindow;
-import com.mcl.typesofsorts.HelloApplication;
+import com.mcl.typesofsorts.logic.Main;
 import javafx.collections.FXCollections;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
-import javafx.scene.layout.VBox;
 
 public class MainController {
 
@@ -64,20 +62,20 @@ public class MainController {
                 type = searches.getValue();
             else if (sorts.getValue() != null)
                 type = sorts.getValue();
-            //Checking for the correctness of the specified data
-            if (type.equals("")){
 
-            } else {
-                FirstWindow firstWindow = new FirstWindow(arrayField.getText(), split.getText(), photo.isSelected()
-                        , type);
-                try {
-                    //create the second window
-                    HelloApplication.openSecondWindow();
-                } catch (IOException e) {
-                    throw new RuntimeException(e);
-                }
+            //Checking for the correctness of the specified data
+            Main firstWindow = new Main(arrayField.getText(), split.getText(), photo.isSelected()
+                    , type);
+
+            //start the program
+            try {
+                firstWindow.begin();
+            } catch (IOException e) {
+                throw new RuntimeException(e);
             }
+
+            //create the result window
+
         });
     }
-
 }
