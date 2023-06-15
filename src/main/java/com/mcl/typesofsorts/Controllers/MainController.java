@@ -55,7 +55,6 @@ public class MainController {
 
         //start button
         startButton.setOnAction(event -> {
-            System.out.println("work");
             //finds out which sorting or search to use
             String type = "";
             if (searches.getValue() != null)
@@ -73,9 +72,6 @@ public class MainController {
             } catch (IOException e) {
                 throw new RuntimeException(e);
             }
-
-            //create the result window
-
         });
     }
 }
