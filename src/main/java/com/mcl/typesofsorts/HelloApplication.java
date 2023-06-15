@@ -23,24 +23,15 @@ public class HelloApplication extends Application {
     }
 
     //second window
-    public static void openSecondWindow() throws IOException {
-        Stage secondStage = new Stage();
-        secondStage.setTitle("Great!");
-        FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("sortPage.fxml"));
-        Scene secondScene = new Scene(fxmlLoader.load(), 600, 400);
-        secondStage.setScene(secondScene);
-        secondStage.show();
-    }
-
-    //window for point a the exact element
-    public static void openInputNumber() throws IOException {
+    public static void openResultWindow() throws IOException {
         Stage inputStage = new Stage();
         inputStage.setTitle("Input!");
-        FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("input.fxml"));
-        Scene secondScene = new Scene(fxmlLoader.load(), 200, 120);
+        FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("result.fxml"));
+        Scene secondScene = new Scene(fxmlLoader.load(), 600, 400);
         inputStage.setScene(secondScene);
         inputStage.show();
     }
+
     //error message
     public static String errorMessage = "ERROR";
 

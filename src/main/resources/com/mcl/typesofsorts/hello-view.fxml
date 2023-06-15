@@ -45,7 +45,14 @@
                      </image>
                   </ImageView>
                   <ComboBox fx:id="searches" layoutX="16.0" layoutY="114.0" prefHeight="26.0" prefWidth="174.0" promptText="types of searches" />
-                  <Text layoutX="156.0" layoutY="166.0" strokeType="OUTSIDE" strokeWidth="0.0" text="how to split numbers (default space)" wrappingWidth="249.60001220703134">
+                  <Text layoutX="249.0" layoutY="170.0" strokeType="OUTSIDE" strokeWidth="0.0" text="split result (default space)" wrappingWidth="249.60001220703134">
+                     <font>
+                        <Font name="Baskerville Old Face" size="15.0" />
+                     </font>
+                  </Text>
+                  <TextField fx:id="split" layoutX="211.0" layoutY="151.0" prefHeight="26.0" prefWidth="38.0" />
+                  <TextField fx:id="findNumber" layoutX="16.0" layoutY="152.0" prefHeight="26.0" prefWidth="38.0" />
+                  <Text layoutX="55.0" layoutY="170.0" strokeType="OUTSIDE" strokeWidth="0.0" text="what number to look for?" wrappingWidth="156.00002136230478">
                      <font>
                         <Font name="Baskerville Old Face" size="15.0" />
                      </font>
@@ -76,7 +83,6 @@
          </image>
       </ImageView>
       <ComboBox fx:id="sorts" layoutX="205.0" layoutY="115.0" prefHeight="25.0" prefWidth="181.0" promptText="types of sorts" />
-      <TextField fx:id="split" layoutX="111.0" layoutY="149.0" prefHeight="25.0" prefWidth="38.0" />
    </children>
    <effect>
       <InnerShadow choke="0.13" height="5.79" radius="2.1025" width="4.62" />

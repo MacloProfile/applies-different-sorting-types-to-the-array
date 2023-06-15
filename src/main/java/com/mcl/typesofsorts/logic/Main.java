@@ -1,7 +1,5 @@
 package com.mcl.typesofsorts.logic;
 
-import com.mcl.typesofsorts.Controllers.InputFieldController;
-import com.mcl.typesofsorts.Controllers.SortController;
 import com.mcl.typesofsorts.HelloApplication;
 import com.mcl.typesofsorts.logic.search.Binary;
 import com.mcl.typesofsorts.logic.search.Linear;
@@ -14,11 +12,14 @@ public class Main {
     private Boolean showGraph;
     private String searchOrSort;
     private boolean flagResult;
+    private String findNumber;
 
-    public Main(String inputArray, String splitChar, Boolean showGraph, String searchOrSort) {
+    public Main(String inputArray, String splitChar, Boolean showGraph, String searchOrSort, String findNumber) {
         this.inputArray = inputArray;
         this.showGraph = showGraph;
         this.searchOrSort = searchOrSort;
+        this.findNumber = findNumber;
+
         //set the split, default space
         if (splitChar.equals(""))
             this.splitChar = " ";
@@ -31,25 +32,22 @@ public class Main {
         this.flagResult = Errors.checkErrors(searchOrSort, inputArray);
 
         //set fields in result window
-        SortController controller = new SortController();
-
+        String findResult = add();
+        SetResultFields resultFields = new SetResultFields(inputArray, findResult);
 
         if (flagResult){
-            HelloApplication.openSecondWindow();
+            HelloApplication.openResultWindow();
         }
     }
 
+
     //gets a ready-made list from the desired method
-    private String add() {
-        String findNumber = "";
-        InputFieldController fieldController = new InputFieldController();
+    private String add() throws IOException {
         String[] array = inputArray.split(" ");
         switch (searchOrSort) {
             case ("Linear Search"):
-                findNumber = fieldController.getInputField();
                 return Linear.linearSearch(array, findNumber);
             case ("Binary Search"):
-                findNumber = fieldController.getInputField();
                 return Binary.binarySearch(array, findNumber);
             case ("Bubble Sort"):
                 return "";

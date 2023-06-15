@@ -39,6 +39,9 @@ public class MainController {
     private Button startButton;
 
     @FXML
+    private TextField findNumber;
+
+    @FXML
     void initialize() {
         assert arrayField != null : "fx:id=\"arrayField\" was not injected: check your FXML file 'hello-view.fxml'.";
         assert linkOnGithub != null : "fx:id=\"linkOnGithub\" was not injected: check your FXML file 'hello-view.fxml'.";
@@ -62,9 +65,14 @@ public class MainController {
             else if (sorts.getValue() != null)
                 type = sorts.getValue();
 
+            //findNumber if user chose the search
+            String number = "void";
+            if (findNumber.getText() != null)
+                number = findNumber.getText();
+
             //Checking for the correctness of the specified data
             Main firstWindow = new Main(arrayField.getText(), split.getText(), photo.isSelected()
-                    , type);
+                    , type, number);
 
             //start the program
             try {
