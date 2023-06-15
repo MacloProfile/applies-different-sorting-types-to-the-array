@@ -20,4 +20,8 @@ public class InputFieldController {
     void initialize() {
 
     }
+    //get searching element
+    public String getInputField() {
+        return inputField.getText();
+    }
 }
