@@ -5,6 +5,7 @@ import com.mcl.typesofsorts.logic.search.Binary;
 import com.mcl.typesofsorts.logic.search.Linear;
 import com.mcl.typesofsorts.logic.sorts.Bubble;
 import com.mcl.typesofsorts.logic.sorts.Insertion;
+import com.mcl.typesofsorts.logic.sorts.Merge;
 
 import java.io.IOException;
 import java.util.Arrays;
@@ -76,6 +77,7 @@ public class Main {
             case ("Selection Sort"):
                 return "";
             case "Merge Sort":
+                Merge.mergeSort(array);
                 return "";
             case ("Quick Sort"):
                 return "";
@@ -101,6 +103,8 @@ public class Main {
             case ("Selection Sort"):
                 break;
             case "Merge Sort":
+                Merge merge = new Merge();
+                merge.start();
                 break;
             case ("Quick Sort"):
                 break;

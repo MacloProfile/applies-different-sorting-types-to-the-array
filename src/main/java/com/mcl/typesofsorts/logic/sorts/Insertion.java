@@ -31,7 +31,7 @@ public class Insertion extends View {
         super.start();
         insertionSortView();
     }
-    
+
     private void insertionSortView() {
         Timeline timeline = new Timeline();
         for (int i = 1; i < arraySize; i++) {
