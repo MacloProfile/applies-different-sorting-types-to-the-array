@@ -46,7 +46,6 @@ public class Main {
 
         if (flagResult){
             HelloApplication.openResultWindow();
-
             //graph view
             if (showGraph)
                 graph();
@@ -89,6 +88,8 @@ public class Main {
     private void graph() throws IOException {
         switch (searchOrSort) {
             case ("Linear Search"):
+                Linear linear = new Linear();
+                linear.start();
                 break;
             case ("Binary Search"):
                 break;
