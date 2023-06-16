@@ -40,7 +40,9 @@ public class Main {
         //error check
         this.flagResult = Errors.checkErrors(searchOrSort, inputArrayString);
 
+
         //set fields in result window
+
         String findResult = add();
         SetResultFields resultFields = new SetResultFields(inputArrayString, findResult);
 
@@ -62,6 +64,10 @@ public class Main {
         int[] array = Arrays.stream(inputArray)
                 .mapToInt(Integer::parseInt)
                 .toArray();
+
+        //correct display of the sorted list in the final window
+        if (searchOrSort.equals("Binary Search"))
+            inputArrayString = Arrays.toString(Arrays.stream(array).sorted().toArray());
 
         switch (searchOrSort) {
             case ("Linear Search"):

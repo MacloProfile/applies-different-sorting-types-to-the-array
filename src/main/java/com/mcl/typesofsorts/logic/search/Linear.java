@@ -7,6 +7,7 @@ import javafx.scene.paint.Color;
 import javafx.util.Duration;
 
 public class Linear extends ViewSearch{
+    //search the input number
     public static String linearSearch(int[] array, int target) {
         for (int i = 0; i < array.length; i++) {
             if (array[i] == target) {
@@ -17,6 +18,7 @@ public class Linear extends ViewSearch{
         return "element not found";
     }
 
+    //visualization
     @Override
     public void start() {
         Timeline timeline = LinearSearchAnimation(array);

@@ -48,6 +48,4 @@ public class ViewSearch{
         target = array[(int) (Math.random() * 10)];
         return array;
     }
-
-
 }
