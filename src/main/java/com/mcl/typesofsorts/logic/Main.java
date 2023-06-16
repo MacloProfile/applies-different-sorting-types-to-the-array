@@ -48,7 +48,8 @@ public class Main {
             HelloApplication.openResultWindow();
 
             //graph view
-            graph();
+            if (showGraph)
+                graph();
         }
     }
 
