@@ -7,7 +7,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml" fx:controller="com.mcl.typesofsorts.Controllers.ResultController">
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mcl.typesofsorts.Controllers.ResultController">
    <children>
       <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="440.0" layoutY="244.0" pickOnBounds="true" preserveRatio="true">
          <image>
@@ -29,7 +29,7 @@
             <Image url="@img/545682.png" />
          </image>
       </ImageView>
-      <Text layoutX="221.0" layoutY="114.0" strokeType="OUTSIDE" strokeWidth="0.0" text="sorted array" wrappingWidth="191.77264404296875">
+      <Text layoutX="256.0" layoutY="114.0" strokeType="OUTSIDE" strokeWidth="0.0" text="result" wrappingWidth="191.77264404296875">
          <font>
             <Font name="Berlin Sans FB" size="29.0" />
          </font>
