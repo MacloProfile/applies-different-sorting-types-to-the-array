@@ -37,23 +37,20 @@ public class Bubble extends View {
     }
 
     public void bubbleSortView() {
-
         Timeline timeline = new Timeline();
         for (int i = 0; i < arraySize - 1; i++) {
             for (int j = 0; j < arraySize - i - 1; j++) {
-                int id = j;
-
-                KeyFrame keyFrame = new KeyFrame(Duration.millis(400 * (j + i)), event -> {
+                //Only a final copy of a variable can be used inside a lambda expression
+                final int id = j;
+                KeyFrame frame = new KeyFrame(Duration.millis(400 * (j + i)), event -> {
                     if (array[id] > array[id + 1]) {
                         repositioningElements(id, id + 1, array);
                         repositioningRectangle(id, id + 1, rectangles);
                     }
                 });
-
-                timeline.getKeyFrames().add(keyFrame);
+                timeline.getKeyFrames().add(frame);
             }
         }
-
         timeline.play();
     }
 }

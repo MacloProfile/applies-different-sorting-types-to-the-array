@@ -17,6 +17,7 @@ public class Main {
     private Boolean showGraph;
     private String searchOrSort;
     private boolean flagResult;
+    //if user chose the search
     private String findNumber;
 
     //constructor
@@ -94,6 +95,8 @@ public class Main {
                 bubble.start();
                 break;
             case ("Insertion Sort"):
+                Insertion insertion = new Insertion();
+                insertion.start();
                 break;
             case ("Selection Sort"):
                 break;
