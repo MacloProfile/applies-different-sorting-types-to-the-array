@@ -42,7 +42,7 @@ public class Bubble extends View {
             for (int j = 0; j < arraySize - i - 1; j++) {
                 //Only a final copy of a variable can be used inside a lambda expression
                 final int id = j;
-                KeyFrame frame = new KeyFrame(Duration.millis(400 * (j + i)), event -> {
+                KeyFrame frame = new KeyFrame(Duration.millis(speedChart * (j + i)), event -> {
                     if (array[id] > array[id + 1]) {
                         repositioningElements(id, id + 1, array);
                         repositioningRectangle(id, id + 1, rectangles);

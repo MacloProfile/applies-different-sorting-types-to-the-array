@@ -37,7 +37,7 @@ public class Insertion extends View {
         for (int i = 1; i < arraySize; i++) {
             //Only a final copy of a variable can be used inside a lambda expression
             final int id = i;
-            KeyFrame frame = new KeyFrame(Duration.millis(400 * i), event -> {
+            KeyFrame frame = new KeyFrame(Duration.millis(speedChart * i), event -> {
                 int index = array[id];
                 int j = id - 1;
 

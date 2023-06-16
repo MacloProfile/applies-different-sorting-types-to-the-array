@@ -93,7 +93,7 @@ public class Merge extends View {
         timeline = new Timeline();
         for (int i = 0; i < array.length; i++) {
             final int index = i;
-            KeyFrame keyFrame = new KeyFrame(Duration.millis(400 * i), event -> {
+            KeyFrame keyFrame = new KeyFrame(Duration.millis(speedChart * i), event -> {
                 rectangles[index].setHeight(array[index]);
             });
             timeline.getKeyFrames().add(keyFrame);

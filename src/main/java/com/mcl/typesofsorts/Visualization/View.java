@@ -11,6 +11,7 @@ import java.util.Random;
 
 public class View {
     protected int arraySize = 20;
+    protected int speedChart = 555;
 
     public void setArraySize(int arraySize) {
         this.arraySize = arraySize;
