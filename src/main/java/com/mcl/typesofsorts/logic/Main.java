@@ -6,6 +6,7 @@ import com.mcl.typesofsorts.logic.search.Linear;
 import com.mcl.typesofsorts.logic.sorts.Bubble;
 import com.mcl.typesofsorts.logic.sorts.Insertion;
 import com.mcl.typesofsorts.logic.sorts.Merge;
+import com.mcl.typesofsorts.logic.sorts.Quick;
 
 import java.io.IOException;
 import java.util.Arrays;
@@ -43,7 +44,6 @@ public class Main {
         String findResult = add();
         SetResultFields resultFields = new SetResultFields(inputArrayString, findResult);
 
-
         if (flagResult){
             HelloApplication.openResultWindow();
 
@@ -74,12 +74,11 @@ public class Main {
                 return Bubble.bubbleSort(array);
             case ("Insertion Sort"):
                 return Insertion.insertionSort(array);
-            case ("Selection Sort"):
-                return "";
             case "Merge Sort":
                 Merge.mergeSort(array);
                 return "";
             case ("Quick Sort"):
+                Quick.quickSort(array);
                 return "";
             default:
                 return "ERROR";
@@ -100,13 +99,13 @@ public class Main {
                 Insertion insertion = new Insertion();
                 insertion.start();
                 break;
-            case ("Selection Sort"):
-                break;
             case "Merge Sort":
                 Merge merge = new Merge();
                 merge.start();
                 break;
             case ("Quick Sort"):
+                Quick quick = new Quick();
+                quick.start();
                 break;
             default:
                 break;
