@@ -4,13 +4,9 @@ import java.util.Arrays;
 import java.util.Objects;
 
 public class Linear {
-    public static String linearSearch(String[] array, String target) {
-        int target1 = Integer.parseInt(target);
-        int[] array1 = Arrays.stream(array)
-                .mapToInt(Integer::parseInt)
-                .toArray();
-        for (int i = 0; i < array1.length; i++) {
-            if (array1[i] == target1) {
+    public static String linearSearch(int[] array, int target) {
+        for (int i = 0; i < array.length; i++) {
+            if (array[i] == target) {
                 return String.valueOf(i);
             }
         }

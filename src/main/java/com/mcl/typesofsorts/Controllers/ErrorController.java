@@ -15,7 +15,6 @@ public class ErrorController {
     @FXML
     private URL location;
 
-    
     @FXML
     private TextArea errorField;
 
