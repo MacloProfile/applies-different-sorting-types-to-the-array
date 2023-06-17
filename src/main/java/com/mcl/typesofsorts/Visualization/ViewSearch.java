@@ -43,7 +43,7 @@ public class ViewSearch{
     protected int[] generateRandomArray() {
         int[] array = new int[arraySize];
         for (int i = 0; i < arraySize; i++) {
-            array[i] = (int) (Math.random() * 100);
+            array[i] = (int) (Math.random() * 50);
         }
         target = array[(int) (Math.random() * 10)];
         return array;

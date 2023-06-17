@@ -98,6 +98,8 @@ public class Main {
                 linear.start();
                 break;
             case ("Binary Search"):
+                Binary binary = new Binary();
+                binary.start();
                 break;
             case ("Bubble Sort"):
                 Bubble bubble = new Bubble();
