@@ -3,14 +3,11 @@ package com.mcl.typesofsorts.logic;
 import com.mcl.typesofsorts.HelloApplication;
 import java.io.IOException;
 import java.util.Arrays;
-import java.util.StringJoiner;
 import java.util.concurrent.ThreadLocalRandom;
 import java.util.stream.Collectors;
 
 public class CreateRandomArray {
     private static int[] ints;
-    private static String string;
-    private StringJoiner joiner = new StringJoiner(" ");
 
     //created array
     public static String create(String values, boolean order) throws IOException {

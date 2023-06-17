@@ -38,11 +38,10 @@ public class Main {
     //start the program
     public void begin() throws IOException {
         //error check
-        flagResult = Errors.checkErrors(searchOrSort, inputArrayString, findNumber);
+        Errors.checkErrors(searchOrSort, inputArrayString, findNumber);
         if (flagResult){
             //set fields in result window
             String findResult = add();
-
             SetResultFields resultFields = new SetResultFields(inputArrayString, findResult);
 
             HelloApplication.openResultWindow();

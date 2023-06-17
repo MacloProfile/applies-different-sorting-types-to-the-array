@@ -1,10 +1,8 @@
 package com.mcl.typesofsorts;
 
-import com.mcl.typesofsorts.Controllers.ErrorController;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
-import javafx.scene.control.Hyperlink;
 import javafx.stage.Stage;
 
 import java.io.IOException;
@@ -19,16 +17,6 @@ public class HelloApplication extends Application {
         stage.setTitle("Kinds of sorts");
         stage.setScene(scene);
         stage.setResizable(false);
-        stage.show();
-    }
-
-    //array random window
-    public static void randomWindow() throws IOException {
-        Stage stage = new Stage();
-        stage.setTitle("Create an array!");
-        FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("array.fxml"));
-        Scene secondScene = new Scene(fxmlLoader.load(), 300, 220);
-        stage.setScene(secondScene);
         stage.show();
     }
 
