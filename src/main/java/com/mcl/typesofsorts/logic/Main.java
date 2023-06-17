@@ -42,6 +42,7 @@ public class Main {
         if (flagResult){
             //set fields in result window
             String findResult = add();
+
             SetResultFields resultFields = new SetResultFields(inputArrayString, findResult);
 
             HelloApplication.openResultWindow();
@@ -50,7 +51,6 @@ public class Main {
                 graph();
         }
     }
-
 
     //gets a ready-made list from the desired method
     private String add() throws IOException {
@@ -67,26 +67,45 @@ public class Main {
             inputArrayString = Arrays.toString(Arrays.stream(array).sorted().toArray());
             inputArrayString = inputArrayString.substring(1, inputArrayString.length() - 1);
         }
-
+        //start algorithm
+        String result;
         switch (searchOrSort) {
             case ("Linear Search"):
                 target = Integer.parseInt(findNumber);
-                return Linear.linearSearch(array, target);
+                Timer.timeStart();
+                result = Linear.linearSearch(array, target);
+                Timer.timeEnd();
+                break;
             case ("Binary Search"):
                 target = Integer.parseInt(findNumber);
-                return Binary.binarySearch(array, target);
+                result = Binary.binarySearch(array, target);
+                break;
             case ("Bubble Sort"):
-                return Bubble.bubbleSort(array);
+                Timer.timeStart();
+                result = Bubble.bubbleSort(array);
+                Timer.timeEnd();
+                break;
             case ("Insertion Sort"):
-                return Insertion.insertionSort(array);
+                Timer.timeStart();
+                result = Insertion.insertionSort(array);
+                Timer.timeEnd();
+                break;
             case "Merge Sort":
-                return Merge.mergeSort(array);
+                Timer.timeStart();
+                result = Merge.mergeSort(array);
+                Timer.timeEnd();
+                break;
             case ("Quick Sort"):
-                return Quick.quickSort(array);
+                Timer.timeStart();
+                result = Quick.quickSort(array);
+                Timer.timeEnd();
+                break;
             default:
-                return "ERROR";
+                result = "ERROR";
         }
+        return result;
     }
+
     //create a chart
     private void graph() throws IOException {
         switch (searchOrSort) {

@@ -4,10 +4,12 @@ package com.mcl.typesofsorts.logic;
 public class SetResultFields {
     private static String course;
     private static String result;
+    private static String runtime;
 
     public SetResultFields(String first, String second) {
         course = first;
         result = second;
+        runtime = Timer.getTime();
     }
 
     public static String getCourse() {
@@ -16,5 +18,9 @@ public class SetResultFields {
 
     public static String getResult() {
         return result;
+    }
+
+    public static String getRuntime() {
+        return runtime;
     }
 }

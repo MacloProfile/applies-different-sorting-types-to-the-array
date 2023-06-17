@@ -1,6 +1,8 @@
 package com.mcl.typesofsorts.logic.search;
 
 import com.mcl.typesofsorts.Visualization.ViewSearch;
+import com.mcl.typesofsorts.logic.Main;
+import com.mcl.typesofsorts.logic.Timer;
 import com.mcl.typesofsorts.logic.sorts.Quick;
 import javafx.animation.KeyFrame;
 import javafx.animation.Timeline;
@@ -13,13 +15,14 @@ public class Binary extends ViewSearch {
     public static String binarySearch(int[] array, int target) {
         //Binary search needs a sorted array. Sort the array in one of the fastest ways
         Quick.quickSort(array);
-
+        Timer.timeStart();
         int left = 0;
         int right = array.length - 1;
 
         while (left <= right) {
             int middle = left + (right - left) / 2;
             if (array[middle] == target) {
+                Timer.timeEnd();
                 return String.valueOf(middle);
             } else if (array[middle] < target) {
                 left = middle + 1;
@@ -27,20 +30,20 @@ public class Binary extends ViewSearch {
                 right = middle - 1;
             }
         }
-
+        Timer.timeEnd();
         return "element not found";
     }
 
     //visualization
     @Override
     public void start() {
-        Timeline timeline = LinearSearchAnimation(array);
+        Timeline timeline = BinarySearchView(array);
         timeline.setCycleCount(1);
         timeline.play();
         super.start();
     }
 
-    private Timeline LinearSearchAnimation(int[] array) {
+    private Timeline BinarySearchView(int[] array) {
         Timeline timeline = new Timeline();
         for (int i = 0; i < 4; i++) {
             int finalI = i;

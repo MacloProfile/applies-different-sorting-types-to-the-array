@@ -1,6 +1,7 @@
 package com.mcl.typesofsorts.logic.sorts;
 
 import com.mcl.typesofsorts.Visualization.View;
+import com.mcl.typesofsorts.logic.Timer;
 import javafx.animation.KeyFrame;
 import javafx.animation.Timeline;
 import javafx.util.Duration;
