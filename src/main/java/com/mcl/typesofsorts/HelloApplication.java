@@ -22,6 +22,16 @@ public class HelloApplication extends Application {
         stage.show();
     }
 
+    //array random window
+    public static void randomWindow() throws IOException {
+        Stage stage = new Stage();
+        stage.setTitle("Create an array!");
+        FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("array.fxml"));
+        Scene secondScene = new Scene(fxmlLoader.load(), 300, 220);
+        stage.setScene(secondScene);
+        stage.show();
+    }
+
     //second window
     public static void openResultWindow() throws IOException {
         Stage inputStage = new Stage();

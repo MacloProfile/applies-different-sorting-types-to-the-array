@@ -3,7 +3,7 @@ package com.mcl.typesofsorts.Controllers;
 import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
-
+import com.mcl.typesofsorts.logic.CreateRandomArray;
 import com.mcl.typesofsorts.logic.Main;
 import javafx.collections.FXCollections;
 import javafx.fxml.FXML;
@@ -42,19 +42,34 @@ public class MainController {
     private TextField findNumber;
 
     @FXML
+    private Button randomArray;
+
+    @FXML
+    private Button randomArrayStart;
+
+    @FXML
+    private CheckBox valuesInOrder;
+
+    @FXML
+    private TextField countOfNumbers;
+
+    @FXML
     void initialize() {
-        assert arrayField != null : "fx:id=\"arrayField\" was not injected: check your FXML file 'hello-view.fxml'.";
-        assert linkOnGithub != null : "fx:id=\"linkOnGithub\" was not injected: check your FXML file 'hello-view.fxml'.";
-        assert photo != null : "fx:id=\"photo\" was not injected: check your FXML file 'hello-view.fxml'.";
-        assert searches != null : "fx:id=\"searches\" was not injected: check your FXML file 'hello-view.fxml'.";
-        assert sorts != null : "fx:id=\"sorts\" was not injected: check your FXML file 'hello-view.fxml'.";
-        assert split != null : "fx:id=\"split\" was not injected: check your FXML file 'hello-view.fxml'.";
-        assert startButton != null : "fx:id=\"startButton\" was not injected: check your FXML file 'hello-view.fxml'.";
+        //create random array and initialize the arrayField
+        randomArrayStart.setOnAction(event -> {
+            try {
+                arrayField.setText(CreateRandomArray.create(countOfNumbers.getText(), valuesInOrder.isSelected()));
+            } catch (IOException e) {
+                Main.flagResult = false;
+            }
+
+        });
 
         //set values for ComboBox
         searches.setItems(FXCollections.observableArrayList("Linear Search", "Binary Search"));
         sorts.setItems(FXCollections.observableArrayList("Bubble Sort", "Insertion Sort",
                 "Merge Sort", "Quick Sort"));
+
 
         //start button
         startButton.setOnAction(event -> {

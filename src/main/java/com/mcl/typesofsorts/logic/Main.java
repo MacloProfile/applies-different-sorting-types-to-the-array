@@ -18,14 +18,14 @@ public class Main {
     private String splitChar;
     private Boolean showGraph;
     private String searchOrSort;
-    private boolean flagResult;
+    public static boolean flagResult;
     //if user chose the search
     private String findNumber;
 
     //constructor
-    public Main(String inputArray, String splitChar, Boolean showGraph, String searchOrSort, String findNumber) {
+    public Main(String inputArray, String splitChar, Boolean showGraph1, String searchOrSort, String findNumber) {
         this.inputArrayString = inputArray;
-        this.showGraph = showGraph;
+        showGraph = showGraph1;
         this.searchOrSort = searchOrSort;
         this.findNumber = findNumber;
 
@@ -38,7 +38,7 @@ public class Main {
     //start the program
     public void begin() throws IOException {
         //error check
-        this.flagResult = Errors.checkErrors(searchOrSort, inputArrayString, findNumber);
+        flagResult = Errors.checkErrors(searchOrSort, inputArrayString, findNumber);
         if (flagResult){
             //set fields in result window
             String findResult = add();
