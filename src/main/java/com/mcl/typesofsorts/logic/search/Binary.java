@@ -53,7 +53,7 @@ public class Binary extends ViewSearch {
         Timeline timeline = new Timeline();
         for (int i = 0; i < 4; i++) {
             int finalI = i;
-            KeyFrame keyFrame = new KeyFrame(Duration.millis(speedChart * i + 300), event -> {
+            KeyFrame keyFrame = new KeyFrame(Duration.millis(speedChart * i + 1000), event -> {
                 if (finalI == 0) {
                     for (int j = 0; j < 5; j++) {
                         rectangles[j].setFill(Color.RED);

@@ -3,6 +3,7 @@ package com.mcl.typesofsorts.Controllers;
 import com.mcl.typesofsorts.HelloApplication;
 import javafx.fxml.FXML;
 import javafx.scene.control.TextArea;
+import javafx.scene.control.TextField;
 
 import java.net.URL;
 import java.util.ResourceBundle;
@@ -15,7 +16,7 @@ public class ErrorController {
     private URL location;
 
     @FXML
-    private TextArea errorField;
+    private TextField errorField;
 
     @FXML
     void initialize() {

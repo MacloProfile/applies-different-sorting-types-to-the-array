@@ -38,15 +38,12 @@ public class Main {
     //start the program
     public void begin() throws IOException {
         //error check
-        this.flagResult = Errors.checkErrors(searchOrSort, inputArrayString);
-
-
-        //set fields in result window
-
-        String findResult = add();
-        SetResultFields resultFields = new SetResultFields(inputArrayString, findResult);
-
+        this.flagResult = Errors.checkErrors(searchOrSort, inputArrayString, findNumber);
         if (flagResult){
+            //set fields in result window
+            String findResult = add();
+            SetResultFields resultFields = new SetResultFields(inputArrayString, findResult);
+
             HelloApplication.openResultWindow();
             //graph view
             if (showGraph)
@@ -59,12 +56,12 @@ public class Main {
     private String add() throws IOException {
         //search number
         int target;
+
         //from an array of strings to an array of numbers
         inputArray = inputArrayString.split(" ");
         int[] array = Arrays.stream(inputArray)
                 .mapToInt(Integer::parseInt)
                 .toArray();
-
         //correct display of the sorted list in the final window
         if (searchOrSort.equals("Binary Search"))
             inputArrayString = Arrays.toString(Arrays.stream(array).sorted().toArray());
