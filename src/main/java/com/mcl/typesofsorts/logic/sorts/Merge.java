@@ -9,9 +9,9 @@ import java.util.Arrays;
 public class Merge extends View {
     private Timeline timeline = new Timeline();
 
-    public static void mergeSort(int[] array) {
+    public static String mergeSort(int[] array) {
         if (array.length < 2) {
-            return;
+            return Arrays.toString(array);
         }
 
         int middle = array.length / 2;
@@ -24,6 +24,7 @@ public class Merge extends View {
         mergeSort(leftSide);
         mergeSort(rightSide);
         part(leftSide, rightSide, array);
+        return Arrays.toString(array);
     }
 
     private static void part(int[] left, int[] right, int[] array) {

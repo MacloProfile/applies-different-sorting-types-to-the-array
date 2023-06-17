@@ -3,19 +3,17 @@ package com.mcl.typesofsorts.logic.sorts;
 import com.mcl.typesofsorts.Visualization.View;
 import javafx.animation.KeyFrame;
 import javafx.animation.Timeline;
-import javafx.scene.paint.Color;
-import javafx.scene.shape.Rectangle;
 import javafx.util.Duration;
 
-import java.util.Random;
-import java.util.concurrent.atomic.AtomicInteger;
+import java.util.Arrays;
 
 public class Quick extends View {
     Timeline timeline = new Timeline();
 
     //sort the input array
-    public static void quickSort(int[] array) {
+    public static String quickSort(int[] array) {
         quickSort(array, 0, array.length - 1);
+        return Arrays.toString(array);
     }
 
     private static void quickSort(int[] array, int low, int high) {

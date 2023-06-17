@@ -63,8 +63,10 @@ public class Main {
                 .mapToInt(Integer::parseInt)
                 .toArray();
         //correct display of the sorted list in the final window
-        if (searchOrSort.equals("Binary Search"))
+        if (searchOrSort.equals("Binary Search")) {
             inputArrayString = Arrays.toString(Arrays.stream(array).sorted().toArray());
+            inputArrayString = inputArrayString.substring(1, inputArrayString.length() - 1);
+        }
 
         switch (searchOrSort) {
             case ("Linear Search"):
@@ -78,11 +80,9 @@ public class Main {
             case ("Insertion Sort"):
                 return Insertion.insertionSort(array);
             case "Merge Sort":
-                Merge.mergeSort(array);
-                return "";
+                return Merge.mergeSort(array);
             case ("Quick Sort"):
-                Quick.quickSort(array);
-                return "";
+                return Quick.quickSort(array);
             default:
                 return "ERROR";
         }

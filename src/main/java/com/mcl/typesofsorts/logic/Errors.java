@@ -22,7 +22,6 @@ public class Errors {
         } else {
             return true;
         }
-
         return false;
     }
 }
