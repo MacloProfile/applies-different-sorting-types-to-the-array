@@ -90,21 +90,25 @@ public class Main {
                 Timer.timeStart();
                 result = Bubble.bubbleSort(array);
                 Timer.timeEnd();
+                result = result.substring(1, result.length() - 1);
                 break;
             case ("Insertion Sort"):
                 Timer.timeStart();
                 result = Insertion.insertionSort(array);
                 Timer.timeEnd();
+                result = result.substring(1, result.length() - 1);
                 break;
             case "Merge Sort":
                 Timer.timeStart();
                 result = Merge.mergeSort(array);
                 Timer.timeEnd();
+                result = result.substring(1, result.length() - 1);
                 break;
             case ("Quick Sort"):
                 Timer.timeStart();
                 result = Quick.quickSort(array);
                 Timer.timeEnd();
+                result = result.substring(1, result.length() - 1);
                 break;
             default:
                 result = "ERROR";
