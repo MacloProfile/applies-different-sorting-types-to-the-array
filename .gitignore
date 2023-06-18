@@ -36,3 +36,8 @@ build/
 
 ### Mac OS ###
 .DS_Store
+
+### Build ###
+out
+src/main/resources/META-INF
+.idea/artifacts
