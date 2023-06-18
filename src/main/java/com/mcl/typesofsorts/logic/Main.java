@@ -28,7 +28,7 @@ public class Main {
         showGraph = showGraph1;
         this.searchOrSort = searchOrSort;
         this.findNumber = findNumber;
-
+        flagResult = true;
         //set the split, default space
         if (splitChar.equals(""))
             this.splitChar = " ";
