@@ -15,7 +15,7 @@ public class Errors {
             HelloApplication.error("Empty input array");
             Main.flagResult = false;
         }
-        else if (searchOrSort.equals("Linear Search") || searchOrSort.equals("Binary Search")){
+        else if (searchOrSort.equals("Linear Search") || searchOrSort.equals("Binary Search (only sorted)")){
             try {
                 Integer.parseInt(findNumber);
             } catch (Exception e) {

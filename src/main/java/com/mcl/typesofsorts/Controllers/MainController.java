@@ -3,6 +3,8 @@ package com.mcl.typesofsorts.Controllers;
 import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
+
+import com.mcl.typesofsorts.logic.AlgorithmSelection;
 import com.mcl.typesofsorts.logic.CreateRandomArray;
 import com.mcl.typesofsorts.logic.Main;
 import javafx.collections.FXCollections;
@@ -66,19 +68,16 @@ public class MainController {
         });
 
         //set values for ComboBox
-        searches.setItems(FXCollections.observableArrayList("Linear Search", "Binary Search (only sorted)"));
-        sorts.setItems(FXCollections.observableArrayList("Bubble Sort", "Insertion Sort",
+        searches.setItems(FXCollections.observableArrayList("Types of searches", "Linear Search",
+                "Binary Search (only sorted)"));
+        sorts.setItems(FXCollections.observableArrayList("Types of sorts", "Bubble Sort", "Insertion Sort",
                 "Merge Sort", "Quick Sort"));
 
 
         //start button
         startButton.setOnAction(event -> {
             //finds out which sorting or search to use
-            String type = "";
-            if (searches.getValue() != null)
-                type = searches.getValue();
-            else if (sorts.getValue() != null)
-                type = sorts.getValue();
+            String type = AlgorithmSelection.setAlgorithm(searches, sorts);
 
             //findNumber if user chose the search
             String number = "void";

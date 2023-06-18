@@ -39,15 +39,18 @@ public class Main {
     public void begin() throws IOException {
         //error check
         Errors.checkErrors(searchOrSort, inputArrayString, findNumber);
+
         if (flagResult){
             //set fields in result window
             String findResult = add();
-            SetResultFields resultFields = new SetResultFields(inputArrayString, findResult);
+            if (flagResult) {
+                SetResultFields resultFields = new SetResultFields(inputArrayString, findResult);
 
-            HelloApplication.openResultWindow();
-            //graph view
-            if (showGraph)
-                graph();
+                HelloApplication.openResultWindow();
+                //graph view
+                if (showGraph)
+                    graph();
+            }
         }
     }
 
@@ -101,6 +104,8 @@ public class Main {
                 break;
             default:
                 result = "ERROR";
+                flagResult = false;
+                HelloApplication.error("incorrect method");
         }
         return result;
     }
