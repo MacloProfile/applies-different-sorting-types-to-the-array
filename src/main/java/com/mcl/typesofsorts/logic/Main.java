@@ -48,7 +48,7 @@ public class Main {
             //set fields in result window
             String findResult = add();
             if (flagResult) {
-                SetResultFields resultFields = new SetResultFields(inputArrayString, findResult);
+                SetResultFields resultFields = new SetResultFields(inputArrayString, findResult, searchOrSort);
 
                 Application.openResultWindow();
                 //graph view
