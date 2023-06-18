@@ -55,7 +55,7 @@ public class View {
 
     protected void createRectangles() {
         for (int i = 0; i < arraySize; i++) {
-            rectangles[i] = new Rectangle(15, array[i], randomColor());
+            rectangles[i] = new Rectangle(15, array[i], Color.PURPLE);
         }
     }
 
