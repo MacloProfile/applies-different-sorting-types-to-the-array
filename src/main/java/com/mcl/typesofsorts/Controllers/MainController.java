@@ -3,15 +3,16 @@ package com.mcl.typesofsorts.Controllers;
 import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
-
 import com.mcl.typesofsorts.logic.features.AlgorithmSelection;
 import com.mcl.typesofsorts.logic.features.CreateRandomArray;
 import com.mcl.typesofsorts.logic.Main;
+import com.mcl.typesofsorts.logic.features.PutLink;
 import javafx.collections.FXCollections;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
+import java.awt.Desktop;
 
-public class MainController {
+public class MainController{
 
     @FXML
     private ResourceBundle resources;
@@ -57,6 +58,11 @@ public class MainController {
 
     @FXML
     void initialize() {
+        //link on GitHub
+        linkOnGithub.setOnAction(e -> {
+            PutLink.openGitHub();
+        });
+
         //create random array and initialize the arrayField
         randomArrayStart.setOnAction(event -> {
             try {

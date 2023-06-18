@@ -1,7 +1,7 @@
 module com.mcl.typesofsorts {
     requires javafx.controls;
     requires javafx.fxml;
-
+    requires java.desktop;
 
     opens com.mcl.typesofsorts to javafx.fxml;
     exports com.mcl.typesofsorts;
