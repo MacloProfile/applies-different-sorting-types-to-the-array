@@ -66,7 +66,7 @@ public class MainController {
         });
 
         //set values for ComboBox
-        searches.setItems(FXCollections.observableArrayList("Linear Search", "Binary Search"));
+        searches.setItems(FXCollections.observableArrayList("Linear Search", "Binary Search (only sorted)"));
         sorts.setItems(FXCollections.observableArrayList("Bubble Sort", "Insertion Sort",
                 "Merge Sort", "Quick Sort"));
 

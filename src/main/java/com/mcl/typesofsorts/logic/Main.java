@@ -62,7 +62,7 @@ public class Main {
                 .mapToInt(Integer::parseInt)
                 .toArray();
         //correct display of the sorted list in the final window
-        if (searchOrSort.equals("Binary Search")) {
+        if (searchOrSort.equals("Binary Search (only sorted)")) {
             inputArrayString = Arrays.toString(Arrays.stream(array).sorted().toArray());
             inputArrayString = inputArrayString.substring(1, inputArrayString.length() - 1);
         }
@@ -75,7 +75,7 @@ public class Main {
                 result = Linear.linearSearch(array, target);
                 Timer.timeEnd();
                 break;
-            case ("Binary Search"):
+            case ("Binary Search (only sorted)"):
                 target = Integer.parseInt(findNumber);
                 result = Binary.binarySearch(array, target);
                 break;
@@ -112,7 +112,7 @@ public class Main {
                 Linear linear = new Linear();
                 linear.start();
                 break;
-            case ("Binary Search"):
+            case ("Binary Search (only sorted)"):
                 Binary binary = new Binary();
                 binary.start();
                 break;

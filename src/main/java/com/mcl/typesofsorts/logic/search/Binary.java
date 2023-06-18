@@ -13,8 +13,6 @@ public class Binary extends ViewSearch {
 
     //search the input number
     public static String binarySearch(int[] array, int target) {
-        //Binary search needs a sorted array. Sort the array in one of the fastest ways
-        Quick.quickSort(array);
         Timer.timeStart();
         int left = 0;
         int right = array.length - 1;

@@ -5,7 +5,7 @@ public class Timer {
     private static long end;
 
     public static String getTime() {
-        return String.format("%.6f", ((end - start) * 0.000001));
+        return String.format("%.3f", ((end - start) * 0.000001));
     }
 
     public static void timeStart() {
