@@ -55,7 +55,7 @@ public class Quick extends View {
         if (low < high) {
             int pivotIndex = partition(low, high);
 
-            KeyFrame keyFrame = new KeyFrame(Duration.millis(speedChart + 1000), event -> {
+            KeyFrame keyFrame = new KeyFrame(Duration.millis(speedChart + 500), event -> {
                 quickSortView(low, pivotIndex - 1);
                 quickSortView(pivotIndex + 1, high);
             });

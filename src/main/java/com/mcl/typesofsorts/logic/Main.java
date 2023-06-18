@@ -1,6 +1,6 @@
 package com.mcl.typesofsorts.logic;
 
-import com.mcl.typesofsorts.HelloApplication;
+import com.mcl.typesofsorts.Application;
 import com.mcl.typesofsorts.logic.features.Errors;
 import com.mcl.typesofsorts.logic.features.Timer;
 import com.mcl.typesofsorts.logic.search.Binary;
@@ -50,7 +50,7 @@ public class Main {
             if (flagResult) {
                 SetResultFields resultFields = new SetResultFields(inputArrayString, findResult);
 
-                HelloApplication.openResultWindow();
+                Application.openResultWindow();
                 //graph view
                 if (showGraph)
                     graph(searchOrSort);
@@ -109,7 +109,7 @@ public class Main {
             default:
                 result = "ERROR";
                 flagResult = false;
-                HelloApplication.error("incorrect method");
+                Application.error("incorrect method");
         }
         return result;
     }

@@ -1,8 +1,7 @@
 package com.mcl.typesofsorts.Controllers;
 
-import com.mcl.typesofsorts.HelloApplication;
+import com.mcl.typesofsorts.Application;
 import javafx.fxml.FXML;
-import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
 
 import java.net.URL;
@@ -21,7 +20,7 @@ public class ErrorController {
     @FXML
     void initialize() {
         assert errorField != null : "fx:id=\"errorField\" was not injected: check your FXML file 'error.fxml'.";
-        errorField.setText(HelloApplication.getErrorMessage());
+        errorField.setText(Application.getErrorMessage());
     }
 
 

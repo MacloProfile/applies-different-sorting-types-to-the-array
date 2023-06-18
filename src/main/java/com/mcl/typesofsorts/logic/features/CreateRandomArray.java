@@ -1,6 +1,6 @@
 package com.mcl.typesofsorts.logic.features;
 
-import com.mcl.typesofsorts.HelloApplication;
+import com.mcl.typesofsorts.Application;
 import com.mcl.typesofsorts.logic.Main;
 
 import java.io.IOException;
@@ -17,7 +17,7 @@ public class CreateRandomArray {
         try {
             count = Integer.parseInt(values);
         } catch (Exception e) {
-            HelloApplication.error("Invalid random array values");
+            Application.error("Invalid random array values");
             Main.flagResult = false;
         }
         ints = new int[count];

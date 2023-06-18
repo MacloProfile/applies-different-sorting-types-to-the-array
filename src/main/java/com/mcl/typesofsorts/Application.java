@@ -1,18 +1,17 @@
 package com.mcl.typesofsorts;
 
-import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 
 import java.io.IOException;
 
-public class HelloApplication extends Application {
+public class Application extends javafx.application.Application {
 
     //first window
     @Override
     public void start(Stage stage) throws IOException {
-        FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("hello-view.fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(Application.class.getResource("hello-view.fxml"));
         Scene scene = new Scene(fxmlLoader.load(), 400, 280);
         stage.setTitle("Kinds of sorts");
         stage.setScene(scene);
@@ -24,7 +23,7 @@ public class HelloApplication extends Application {
     public static void openResultWindow() throws IOException {
         Stage inputStage = new Stage();
         inputStage.setTitle("Input!");
-        FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("result.fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(Application.class.getResource("result.fxml"));
         Scene secondScene = new Scene(fxmlLoader.load(), 600, 400);
         inputStage.setScene(secondScene);
         inputStage.show();
@@ -41,7 +40,7 @@ public class HelloApplication extends Application {
         Stage errorStage = new Stage();
         errorStage.setTitle("ERROR");
         errorMessage = message;
-        FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("error.fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(Application.class.getResource("error.fxml"));
         Scene secondScene = new Scene(fxmlLoader.load(), 200, 120);
         errorStage.setScene(secondScene);
         errorStage.show();
