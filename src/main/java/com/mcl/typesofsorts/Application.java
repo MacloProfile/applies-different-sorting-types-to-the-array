@@ -26,6 +26,7 @@ public class Application extends javafx.application.Application {
         FXMLLoader fxmlLoader = new FXMLLoader(Application.class.getResource("result.fxml"));
         Scene secondScene = new Scene(fxmlLoader.load(), 600, 400);
         inputStage.setScene(secondScene);
+        inputStage.setResizable(false);
         inputStage.show();
     }
 
@@ -43,6 +44,7 @@ public class Application extends javafx.application.Application {
         FXMLLoader fxmlLoader = new FXMLLoader(Application.class.getResource("error.fxml"));
         Scene secondScene = new Scene(fxmlLoader.load(), 200, 120);
         errorStage.setScene(secondScene);
+        errorStage.setResizable(false);
         errorStage.show();
     }
 
