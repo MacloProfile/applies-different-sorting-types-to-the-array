@@ -4,8 +4,8 @@ import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
-import com.mcl.typesofsorts.logic.AlgorithmSelection;
-import com.mcl.typesofsorts.logic.CreateRandomArray;
+import com.mcl.typesofsorts.logic.features.AlgorithmSelection;
+import com.mcl.typesofsorts.logic.features.CreateRandomArray;
 import com.mcl.typesofsorts.logic.Main;
 import javafx.collections.FXCollections;
 import javafx.fxml.FXML;

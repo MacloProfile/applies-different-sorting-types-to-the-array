@@ -11,4 +11,6 @@ module com.mcl.typesofsorts {
     opens com.mcl.typesofsorts.logic to javafx.fxml;
     exports com.mcl.typesofsorts.Visualization;
     opens com.mcl.typesofsorts.Visualization to javafx.fxml;
+    exports com.mcl.typesofsorts.logic.features;
+    opens com.mcl.typesofsorts.logic.features to javafx.fxml;
 }

@@ -1,12 +1,13 @@
-package com.mcl.typesofsorts.logic;
+package com.mcl.typesofsorts.logic.features;
 
 import com.mcl.typesofsorts.HelloApplication;
+import com.mcl.typesofsorts.logic.Main;
+
 import java.io.IOException;
-import java.util.Arrays;
 
 public class Errors {
 
-    protected static void checkErrors(String searchOrSort, String inputArray, String findNumber) throws IOException {
+    public static void checkErrors(String searchOrSort, String inputArray, String findNumber) throws IOException {
         if (searchOrSort.equals("")) {
             HelloApplication.error("specify sorting type or search type");
             Main.flagResult = false;

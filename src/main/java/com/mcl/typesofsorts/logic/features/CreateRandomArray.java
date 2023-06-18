@@ -1,6 +1,8 @@
-package com.mcl.typesofsorts.logic;
+package com.mcl.typesofsorts.logic.features;
 
 import com.mcl.typesofsorts.HelloApplication;
+import com.mcl.typesofsorts.logic.Main;
+
 import java.io.IOException;
 import java.util.Arrays;
 import java.util.concurrent.ThreadLocalRandom;

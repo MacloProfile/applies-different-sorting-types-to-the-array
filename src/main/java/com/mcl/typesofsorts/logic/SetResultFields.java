@@ -1,5 +1,7 @@
 package com.mcl.typesofsorts.logic;
 
+import com.mcl.typesofsorts.logic.features.Timer;
+
 //a class for interacting with the fields of the target window
 public class SetResultFields {
     private static String course;

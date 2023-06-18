@@ -1,4 +1,4 @@
-package com.mcl.typesofsorts.logic;
+package com.mcl.typesofsorts.logic.features;
 
 import javafx.scene.control.ComboBox;
 

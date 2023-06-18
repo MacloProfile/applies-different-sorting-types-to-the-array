@@ -1,4 +1,4 @@
-package com.mcl.typesofsorts.logic;
+package com.mcl.typesofsorts.logic.features;
 
 public class Timer {
     private static long start;

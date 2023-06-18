@@ -1,9 +1,7 @@
 package com.mcl.typesofsorts.logic.search;
 
 import com.mcl.typesofsorts.Visualization.ViewSearch;
-import com.mcl.typesofsorts.logic.Main;
-import com.mcl.typesofsorts.logic.Timer;
-import com.mcl.typesofsorts.logic.sorts.Quick;
+import com.mcl.typesofsorts.logic.features.Timer;
 import javafx.animation.KeyFrame;
 import javafx.animation.Timeline;
 import javafx.scene.paint.Color;
