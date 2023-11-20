@@ -51,6 +51,12 @@ public class InformationAboutMethod {
             field3 = "Move the boundary between the sorted and unsorted portions of the collection to the right.";
             field4 = "Repeat the process for the remaining unsorted portion until the entire collection is sorted.";
             field5 = "Selection sort has a time complexity of O(n^2) in all cases, making it less efficient for large datasets.";
+        } else if (method.equals("Bucket Sort")) {
+            field1 = "Divide the range of possible values into a set of buckets.";
+            field2 = "Iterate through the input collection, placing each element into its corresponding bucket.";
+            field3 = "Sort each individual bucket, for example, using another sorting algorithm or recursively applying bucket sort.";
+            field4 = "Concatenate the sorted buckets to obtain the final sorted collection.";
+            field5 = "Bucket sort is efficient when the input has a uniform distribution, with an average time complexity of O(n + k), where k is the number of buckets.";
         }
     }
 

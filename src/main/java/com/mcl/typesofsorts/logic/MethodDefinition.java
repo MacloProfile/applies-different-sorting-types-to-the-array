@@ -44,6 +44,10 @@ public class MethodDefinition {
                 result = Arrays.toString(Selection.selectionSort(array));
                 result = result.substring(1, result.length() - 1);
                 break;
+            case ("Bucket Sort"):
+                result = Arrays.toString(Bucket.bucketSort(array));
+                result = result.substring(1, result.length() - 1);
+                break;
             default:
                 result = "ERROR";
                 Main.flagResult = false;
