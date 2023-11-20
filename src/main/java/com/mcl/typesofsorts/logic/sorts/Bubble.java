@@ -8,22 +8,15 @@ import java.util.Arrays;
 
 public class Bubble extends View {
 
-    //sort the input array
+    //bubble sort
     public static String bubbleSort(int[] array) {
-        int length = array.length;
-        boolean flag;
-        for (int i = 0; i < length - 1; i++) {
-            flag = false;
-            for (int j = 0; j < length - i - 1; j++) {
+        for (int i = 0; i < array.length - 1; i++) {
+            for (int j = 0; j < array.length - 1 - i; j++) {
                 if (array[j] > array[j + 1]) {
                     int temp = array[j];
                     array[j] = array[j + 1];
                     array[j + 1] = temp;
-                    flag = true;
                 }
-            }
-            if (!flag) {
-                break;
             }
         }
         return Arrays.toString(array);
