@@ -10,7 +10,7 @@ import java.util.Arrays;
 public class Insertion extends View {
 
     //sort the input array
-    public static String insertionSort(int[] array) {
+    public static int[] insertionSort(int[] array) {
         int n = array.length;
         for (int i = 1; i < n; ++i) {
             int key = array[i];
@@ -22,7 +22,7 @@ public class Insertion extends View {
             }
             array[j + 1] = key;
         }
-        return Arrays.toString(array);
+        return array;
     }
 
     //visualization

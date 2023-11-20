@@ -7,11 +7,10 @@ import javafx.util.Duration;
 import java.util.Arrays;
 
 public class Merge extends View {
-    private Timeline timeline = new Timeline();
 
-    public static String mergeSort(int[] array) {
+    public static int[] mergeSort(int[] array) {
         if (array.length < 2) {
-            return Arrays.toString(array);
+            return array;
         }
 
         int middle = array.length / 2;
@@ -24,7 +23,7 @@ public class Merge extends View {
         mergeSort(leftSide);
         mergeSort(rightSide);
         part(leftSide, rightSide, array);
-        return Arrays.toString(array);
+        return array;
     }
 
     private static void part(int[] left, int[] right, int[] array) {
@@ -91,7 +90,7 @@ public class Merge extends View {
     }
 
     private void swap(int[] array) {
-        timeline = new Timeline();
+        Timeline timeline = new Timeline();
         for (int i = 0; i < array.length; i++) {
             final int index = i;
             KeyFrame keyFrame = new KeyFrame(Duration.millis(speedChart * i), event -> {

@@ -1,6 +1,7 @@
 package com.mcl.typesofsorts.logic.sorts;
 
 import com.mcl.typesofsorts.Visualization.View;
+import com.mcl.typesofsorts.logic.sorts.general.Swap;
 import javafx.animation.KeyFrame;
 import javafx.animation.Timeline;
 import javafx.util.Duration;
@@ -11,9 +12,9 @@ public class Quick extends View {
     Timeline timeline = new Timeline();
 
     //sort the input array
-    public static String quickSort(int[] array) {
+    public static int[] quickSort(int[] array) {
         quickSort(array, 0, array.length - 1);
-        return Arrays.toString(array);
+        return array;
     }
 
     private static void quickSort(int[] array, int low, int high) {
@@ -30,17 +31,11 @@ public class Quick extends View {
         for (int j = low; j < high; j++) {
             if (array[j] < pivot) {
                 i++;
-                swap(array, i, j);
+                Swap.swapper(array, i, j);
             }
         }
-        swap(array, i + 1, high);
+        Swap.swapper(array, i + 1, high);
         return i + 1;
-    }
-
-    private static void swap(int[] array, int i, int j) {
-        int temp = array[i];
-        array[i] = array[j];
-        array[j] = temp;
     }
 
     //visualization
