@@ -74,7 +74,7 @@ public class MainController{
         searches.setItems(FXCollections.observableArrayList("Types of searches", "Linear Search",
                 "Binary Search (only sorted)"));
         sorts.setItems(FXCollections.observableArrayList("Types of sorts", "Bubble Sort", "Insertion Sort",
-                "Merge Sort", "Quick Sort"));
+                "Merge Sort", "Quick Sort", "Selection Sort"));
 
 
         //start button

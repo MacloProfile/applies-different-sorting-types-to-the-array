@@ -45,6 +45,12 @@ public class InformationAboutMethod {
             field3 = "Recursively apply the quick sort algorithm to the sub-collections.";
             field4 = "Combine the sorted sub-collections with the pivot element to obtain the final sorted collection.";
             field5 = "Quick sort has an average time complexity of O(n log n), but its worst-case time complexity is O(n^2).";
+        } else if (method.equals("Selection Sort")) {
+            field1 = "Iterate through the collection and select the minimum element.";
+            field2 = "Swap the selected minimum element with the first unsorted element.";
+            field3 = "Move the boundary between the sorted and unsorted portions of the collection to the right.";
+            field4 = "Repeat the process for the remaining unsorted portion until the entire collection is sorted.";
+            field5 = "Selection sort has a time complexity of O(n^2) in all cases, making it less efficient for large datasets.";
         }
     }
 
