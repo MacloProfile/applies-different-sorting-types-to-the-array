@@ -11,6 +11,8 @@
 - Insertion sort
 - Merge sort
 - Quick sort
+- Selection sort
+- Bucket sort
 
 The software applies the selected algorithm to your array (the array can be generated automatically) and displays the result
 
@@ -28,7 +30,7 @@ The software applies the selected algorithm to your array (the array can be gene
 - generation of a random array
 - it is possible to specify the size of the required array
 
-## Interface
+## Interface (obsolete)
 ![](https://i.imgur.com/Q9Nta2Q.png)
 ![](https://i.imgur.com/sUqFtha.png)
 
