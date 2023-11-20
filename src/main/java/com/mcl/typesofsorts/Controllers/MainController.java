@@ -36,9 +36,6 @@ public class MainController{
     private ComboBox<String> sorts;
 
     @FXML
-    private TextField split;
-
-    @FXML
     private Button startButton;
 
     @FXML
@@ -91,7 +88,7 @@ public class MainController{
                 number = findNumber.getText();
 
             //Checking for the correctness of the specified data
-            Main firstWindow = new Main(arrayField.getText(), split.getText(), photo.isSelected()
+            Main firstWindow = new Main(arrayField.getText(), photo.isSelected()
                     , type, number);
 
             //start the program

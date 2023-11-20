@@ -12,7 +12,6 @@ public class Main {
     private String inputArrayString;
     private static String[] inputArray;
 
-    private String splitChar;
     private Boolean showGraph;
     private String searchOrSort;
     public static boolean flagResult;
@@ -20,16 +19,12 @@ public class Main {
     private String findNumber;
 
     //constructor
-    public Main(String inputArray, String splitChar, Boolean showGraph1, String searchOrSort, String findNumber) {
+    public Main(String inputArray, Boolean showGraph1, String searchOrSort, String findNumber) {
         this.inputArrayString = inputArray;
         showGraph = showGraph1;
         this.searchOrSort = searchOrSort;
         this.findNumber = findNumber;
         flagResult = true;
-        //set the split, default space
-        if (splitChar.equals(""))
-            this.splitChar = " ";
-        else this.splitChar = splitChar;
     }
 
     //start the program
